@@ -13,6 +13,8 @@ class GagBox extends Component {
 
     this._getGag = this._getGag.bind(this);
     this._handleScroll = this._handleScroll.bind(this);
+
+    // this._getGag();
   }
 
   componentDidMount() {
@@ -39,16 +41,23 @@ class GagBox extends Component {
 
   _handleScroll = (event) => {
     const gagElement = document.getElementsByClassName('gagComponent')[0];
-    console.log('a ' + gagElement.clientHeight + ' b' + 
+    console.log('a' + gagElement.clientHeight + ' b' + 
                 gagElement.scrollTop + ' c' +
-                document.body.scrollHeight
+                document.body.scrollHeight + ' length ' + this.state.jokesList.length
                 );
-    if (
+    /*if (
       (document.body.clientHeight + gagElement.scrollTop) === document.body.scrollHeight &&
       this.state.jokesList.length
     ) {
       this._getGag();
-    }
+    }*/
+
+    const windowHeight = "innerHeight" in window ? window.innerHeight : document.gagElement.offsetHeight;
+    const body = document.body;
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, gagElement.clientHeight,  gagElement.scrollHeight, gagElement.offsetHeight);
+    const windowBottom = windowHeight + window.pageYOffset;
+
+    if (windowBottom >= docHeight) { this._getGag(); }
   }
 
   render() {
