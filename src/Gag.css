@@ -1,6 +1,6 @@
 .gagContainer {
 	width: 50vw;
-	height: 20vh;
+	height: 30vh;
 	margin: auto;
 	display: flex;
 	justify-content: center;
@@ -13,4 +13,6 @@
 
 .gagContent {
 	font-style: italic;
+	text-align: center;
+	text-shadow: 20;
 }
