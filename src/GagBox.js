@@ -45,12 +45,6 @@ class GagBox extends Component {
                 gagElement.scrollTop + ' c' +
                 document.body.scrollHeight + ' length ' + this.state.jokesList.length
                 );
-    /*if (
-      (document.body.clientHeight + gagElement.scrollTop) === document.body.scrollHeight &&
-      this.state.jokesList.length
-    ) {
-      this._getGag();
-    }*/
 
     const windowHeight = "innerHeight" in window ? window.innerHeight : document.gagElement.offsetHeight;
     const body = document.body;
