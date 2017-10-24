@@ -52,18 +52,19 @@ class GagBox extends Component {
   }
 
   render() {
-    const gagComponent = this.state.jokesList.map((data, index) => (
-      <Gag 
-        key={data.id}
-        joke={data.joke}
-        onGag={this._getGag}
-      />
-    ));
+    
     return (
       <div className='gagComponent'>
         <h1 className='title'>DadGag</h1>
         <div className='gagListContainer'>
-          {gagComponent}
+          {this.state.jokesList.map((data, index) => (
+            <Gag 
+              key={index}
+              idx={index}
+              joke={data.joke}
+              onGag={this._getGag}
+            />
+          ))}
         </div>
       </div>
     );

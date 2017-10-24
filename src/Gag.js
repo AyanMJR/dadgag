@@ -4,10 +4,9 @@ import './Gag.css';
 class Gag extends Component {
   
   render() {
-    const boxcolor = [' #af7ac5 ', '#7bcf44','#2dbbd2','#f39c12',' #ec7063 '];
-    let x = boxcolor[Math.floor(Math.random() * 5)];
+    const boxcolor = ['#af7ac5', '#7bcf44', '#2dbbd2', '#f39c12', '#ec7063'];
     let border = {
-      borderColor : x
+      borderColor : boxcolor[(this.props.idx)%boxcolor.length]
     }
     return (
         <div className='gagContainer' style={border}>
