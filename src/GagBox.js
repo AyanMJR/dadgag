@@ -41,11 +41,6 @@ class GagBox extends Component {
 
   _handleScroll = (event) => {
     const gagElement = document.getElementsByClassName('gagComponent')[0];
-    console.log('a' + gagElement.clientHeight + ' b' + 
-                gagElement.scrollTop + ' c' +
-                document.body.scrollHeight + ' length ' + this.state.jokesList.length
-                );
-
     const windowHeight = "innerHeight" in window ? window.innerHeight : document.gagElement.offsetHeight;
     const body = document.body;
     const docHeight = Math.max(body.scrollHeight, body.offsetHeight, gagElement.clientHeight,  gagElement.scrollHeight, gagElement.offsetHeight);
