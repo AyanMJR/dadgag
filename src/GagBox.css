@@ -1,0 +1,16 @@
+@font-face
+  {
+    font-family: grobold;
+    src: url('./fonts/GROBOLD.ttf');
+  }
+
+.gagListContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.title {
+  font-family: grobold, monospace;
+  text-align: center;
+}

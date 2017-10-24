@@ -1,0 +1,16 @@
+.gagContainer {
+	width: 50vw;
+	height: 20vh;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-style: solid;
+	border-radius: 40px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.gagContent {
+	font-style: italic;
+}
